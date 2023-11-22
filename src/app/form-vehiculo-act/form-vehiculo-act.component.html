@@ -1,1 +1,58 @@
-<p>form-vehiculo-act works!</p>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="frmVehiculo" (ngSubmit)="guardarVehiculo()">
+            <div>
+                <label class="form-label">
+                    Código Vehiculo
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese código" name="codvehiculo" formControlName="codvehiculo" readonly>
+            </div>
+            <div>
+                <label class="form-label">
+                    Modelo
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese Modelo" name="modelo" formControlName="modelo">
+            </div>
+            <div>
+                <label class="form-label">
+                    Marca
+                </label>
+                <select name="marca" class="form-control" formControlName="marca">
+                    <option value="01">Nissan</option>
+                    <option value="02">Toyota</option>
+                    <option value="03">Kia</option>
+                    <option value="04">Hyundai</option>
+                    <option value="05">Volkswagen</option>
+                    <option value="06">Ford</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label">
+                    Color
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese color" name="color" formControlName="color">
+            </div>
+            <div>
+                <label class="form-label">
+                    Traccion
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese traccion" name="traccion" formControlName="traccion">
+            </div>
+            <div>
+                <label class="form-label">
+                    Transmision
+                </label>
+                <input type="text" class="form-control" placeholder="Ingrese transmision" name="transmision" formControlName="transmision">
+            </div>
+            <div>
+                <label class="form-label">
+                    Asiento
+                </label>
+                <input type="number" class="form-control" placeholder="Ingrese asiento" name="asiento" formControlName="asiento">
+            </div>
+            <button class="btn btn-primary m-2">Guardar</button>
+            <button class="btn btn-primary m-2" (click)="listar()">Listar</button>
+        </form>
+    </div>
+
+</div>

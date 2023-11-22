@@ -7,8 +7,8 @@ import { FormVehiculoActComponent } from './form-vehiculo-act/form-vehiculo-act.
 const routes: Routes = [
   {path: 'listar', component:TablaVehiculoComponent},
   {path: 'ingresar', component:FormVehiculoComponent},
-  {path: '**', redirectTo: 'listar'},
   {path: 'actualizar', component:FormVehiculoActComponent},
+  {path: '**', redirectTo: 'listar'},
 ];
 
 @NgModule({

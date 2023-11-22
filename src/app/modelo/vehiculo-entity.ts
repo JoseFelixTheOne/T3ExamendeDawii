@@ -1,6 +1,6 @@
 export class VehiculoEntity {
     codvehiculo!: string;
-    Modelo!: string;
+    modelo!: string;
     marca!: string;
     color!: string;
     traccion!: string;

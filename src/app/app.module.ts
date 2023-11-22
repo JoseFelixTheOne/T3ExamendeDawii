@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { FormVehiculoComponent } from './form-vehiculo/form-vehiculo.component';
 import { TablaVehiculoComponent } from './tabla-vehiculo/tabla-vehiculo.component';
 import { FormVehiculoActComponent } from './form-vehiculo-act/form-vehiculo-act.component';
+import { FormVehiculoMarcaComponent } from './form-vehiculo-marca/form-vehiculo-marca.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormVehiculoComponent,
     TablaVehiculoComponent,
-    FormVehiculoActComponent
+    FormVehiculoActComponent,
+    FormVehiculoMarcaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,8 @@
 <div class="container">
-    <table class="table table-dark table-hover">
+  <app-form-vehiculo-marca></app-form-vehiculo-marca>
+    <table class="table table-light table-hover">
         <thead>
-          <tr>
+          <tr class="table-dark">
             <th scope="col">Código</th>
             <th scope="col">Modelo</th>
             <th scope="col">Marca</th>
@@ -15,18 +16,15 @@
         <tbody>
           <tr *ngFor="let elemento of data">
             <th scope="row">{{elemento.codvehiculo}}</th>
-            <td>{{elemento.Modelo}}</td>
+            <td>{{elemento.modelo}}</td>
             <td>{{elemento.marca}}</td>
             <td>{{elemento.color}}</td>
             <td>{{elemento.traccion}}</td>
             <td>{{elemento.transmision}}</td>
             <td>{{elemento.asiento}}</td>
             <td>
-                <!--
-                    <button class="btn btn-warning" (click)="actualizar(elemento.idprod)">Actualizar</button>
-              
-                -->
-                <button class="btn btn-danger" (click)="eliminar(elemento.idprod)">Eliminar</button>
+              <button class="btn btn-primary m-2" (click)="actualizar(elemento.codvehiculo)">Editar</button>
+              <button class="btn btn-danger" (click)="eliminar(elemento.codvehiculo)">Eliminar</button>
             </td>
           </tr>
     

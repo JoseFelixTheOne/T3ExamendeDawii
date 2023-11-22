@@ -35,4 +35,9 @@ export class TablaVehiculoComponent implements OnInit{
     })
   }
 
+  actualizar(codvehiculo: string){
+    this.apiService.codigo=codvehiculo;
+    this.router.navigate(["actualizar"]);
+  }
+
 }

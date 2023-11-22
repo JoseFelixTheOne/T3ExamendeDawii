@@ -1,0 +1,18 @@
+<form class="row g-3" [formGroup]="frmBuscar" (ngSubmit)="buscar()">
+    <div>
+        <label class="form-label">
+            Marca
+        </label>
+        <select name="marca" class="form-control" formControlName="marca">
+            <option value="01">Nissan</option>
+            <option value="02">Toyota</option>
+            <option value="03">Kia</option>
+            <option value="04">Hyundai</option>
+            <option value="05">Volkswagen</option>
+            <option value="06">Ford</option>
+        </select>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+    </div>
+</form>

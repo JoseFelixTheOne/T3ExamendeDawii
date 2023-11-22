@@ -7,11 +7,9 @@ import {Observable} from 'rxjs'
 })
 export class VehiculoServiceService {
   private urlApi= 'vehiculos'
-
-  private urlApiPosts='vehiculos'
-  private urlApiDelete='vehiculos'
-  private urlApiGet='vehiculos'
-  private urlApiPut='vehiculos';
+  private urlApiDelete='vehiculos/'
+  private urlApiGet='vehiculos/'
+  private urlApiGetMarca='vehiculos/marca/';
   codigo = "";
 
   constructor(private http:HttpClient) { }
@@ -27,15 +25,20 @@ export class VehiculoServiceService {
 
   public eliminarVehiculo(codvehiculo: string){
     console.log(codvehiculo);
-    return this.http.delete(this.urlApi + codvehiculo);
+    return this.http.delete(this.urlApiDelete + codvehiculo);
   }
-  public obtenerVehiculo(codvehiculo: string){
-    console.log(codvehiculo);
-    return this.http.get(this.urlApi + codvehiculo);
+  public obtenerVehiculo(){
+    console.log(this.codigo);
+    return this.http.get<any>(this.urlApiGet + this.codigo);
   }
 
   public actualizarVehiculo(data:any){
     console.log(data);
     return this.http.put(this.urlApi, data);
+  }
+
+  public obtenerVehiculoPorMarca(marca: string){
+    console.log(marca);
+    return this.http.get<any>(this.urlApiGetMarca + marca);
   }
 }
